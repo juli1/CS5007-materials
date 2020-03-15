@@ -31,3 +31,7 @@ used. More than one program can be passed on the command line, you should
 then try to locate each of them.
 
 **Hint**: the environment variable `PATH` contains all the directory to look for commands.
+
+## Resources
+
+ * [Bash Guide for Beginners](http://tldp.org/LDP/Bash-Beginners-Guide/html/)
