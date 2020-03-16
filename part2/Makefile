@@ -19,9 +19,12 @@ overflow:
 main:
 	$(CC) -o main main.c
 
-all: clean types-size pointers data-types define macros overflow main
+linkedlist:
+	$(CC) -o linkedlist linkedlist.c
+
+all: clean types-size pointers data-types define macros overflow main linkedlist
 
 clean:
-	rm -f *~ types-size pointers data-types define macros overflow main
+	rm -f *~ types-size pointers data-types define macros overflow main linkedlist
 
 .PHONY: clean all
