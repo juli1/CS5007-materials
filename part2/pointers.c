@@ -15,5 +15,16 @@ int main(int argc, char* argv[]) {
     printf("b=%d p=%d\n", b, *p);
     *p = 51;
     printf("b=%d p=%d\n", b, *p);
+
+    int v[] = {1,2,3,4};
+    int* i = v;
+    int* i2 = i + 3;
+    unsigned char* c = (char*) &v[0];
+    unsigned char* c2 = c + 1;
+    *c2 = 1;
+    printf("%d\n", *c2);
+    printf("%d\n", v[0]);
+    printf("%d\n", *i2);
+
     return (EXIT_SUCCESS);
 }
