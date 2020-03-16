@@ -19,7 +19,7 @@ int main(int argc, char* argv[]) {
     int v[] = {1,2,3,4};
     int* i = v;
     int* i2 = i + 3;
-    unsigned char* c = (char*) &v[0];
+    unsigned char* c = (unsigned char*) &v[0];
     unsigned char* c2 = c + 1;
     *c2 = 1;
     printf("%d\n", *c2);

@@ -27,6 +27,8 @@ int main(int argc, char* argv[]) {
     enum class_part cp;
     cp = part1;
 
+    printf("cp = %d\n", cp);
+
     union unsigned_value uv;
     uv.small = 8;
 
@@ -41,7 +43,7 @@ int main(int argc, char* argv[]) {
     array[0] = 2;
     array[1] = 3;
 
-    int array2[] = { 2 , 3};
+    printf("value of array[1] = %d\n", array[1]);
 
     return (EXIT_SUCCESS);
 }
