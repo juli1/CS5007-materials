@@ -1,3 +1,5 @@
+CFLAGS=-Wall -O2 -pedantic 
+
 part1:
 	$(CC)	-E file.c
 
@@ -6,13 +8,13 @@ part2:
 	cat file.s
 
 part3:
-	$(CC)	-c file.c
+	$(CC) $(CFLAGS)	-c file.c
 	objdump -x file.o
 	hexdump file.o
 
 part4:
-	$(CC)	-c file.c
-	$(CC) -o program file.o -lc
+	$(CC) $(CFLAGS) -c file.c
+	$(CC) $(CFLAGS) -o program file.o -lc
 
 clean:
 	rm -f *~ *.s a.out 
