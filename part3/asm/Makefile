@@ -30,6 +30,6 @@ integration:
 all: helloworld-s helloworld-nasm example arguments reverse integration
 
 clean:
-	rm -f helloworld-nasm helloworld-s example arguments *.o *~
+	rm -f helloworld-nasm helloworld-s example arguments *.o *~ reverse stack functionused
 
 .PHONY: all clean
