@@ -1,3 +1,4 @@
+# AT&T syntax
         .global _start
 
         .text

@@ -1,3 +1,4 @@
+; nasm syntax
 section .data
     msg db      "hello, world!"
 

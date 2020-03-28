@@ -18,8 +18,16 @@ stack:
 	nasm -f elf64 -o stack.o stack.asm
 	ld -o stack stack.o
 
+reverse:
+	nasm -f elf64 -o reverse.o reverse.asm
+	ld -o reverse reverse.o
 
-all: helloworld-s helloworld-nasm example arguments
+integration:
+	nasm -f elf64 -o functions.o functions.asm
+	gcc -c functionused.c
+	gcc -o functionused functionused.o functions.o
+
+all: helloworld-s helloworld-nasm example arguments reverse integration
 
 clean:
 	rm -f helloworld-nasm helloworld-s example arguments *.o *~
