@@ -1,5 +1,5 @@
 CC =gcc
-CFLAGS=-pedantic -Wall
+CFLAGS=-pedantic -Wall -g
 
 forkexample:
 	$(CC) $(CFLAGS) -o forkexample forkexample.c
@@ -10,7 +10,10 @@ shmwriter:
 shmreader:
 	$(CC) $(CFLAGS) -o shmreader shmreader.c -lrt
 
-all: forkexample shmwriter shmreader
+signalhandler:
+	$(CC) $(CFLAGS) -o signalhandler signalhandler.c -lrt
+
+all: forkexample shmwriter shmreader signalhandler
 
 clean:
-	rm -f *~ *.o forkexample shmwriter shmreader
+	rm -f *~ *.o forkexample shmwriter shmreader signalhandler
