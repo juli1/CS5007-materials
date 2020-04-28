@@ -11,10 +11,13 @@ pthread-barrier:
 pthread-mutex:
 	$(CC) $(CFLAGS) $(LDFLAGS) -o pthread-mutex pthread-mutex.c
 
+pthread-cond:
+	$(CC) $(CFLAGS) $(LDFLAGS) -o pthread-cond pthread-cond.c
+
 pthread-semaphore:
 	$(CC) $(CFLAGS) $(LDFLAGS) -o pthread-semaphore pthread-semaphore.c
 
-all: pthread-create pthread-barrier pthread-semaphore pthread-mutex
+all: pthread-create pthread-barrier pthread-semaphore pthread-mutex pthread-cond
 
 clean:
-	rm -f *~ *.o pthread-create pthread-barrier pthread-semaphore pthread-mutex
+	rm -f *~ *.o pthread-create pthread-barrier pthread-semaphore pthread-mutex pthread-cond
