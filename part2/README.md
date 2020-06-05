@@ -38,7 +38,7 @@ Occurrence found at position 0
 Occurrence found at position 6
 ```
 
-**To do**: implement the function
+**To do**: implement the function `print_occurrences`
 
 ## Exercise 1.5: returning the result
 
@@ -46,7 +46,7 @@ We now want to return the list of occurrence instead of printing them
 in the function.
 
 ```c
-int print_occurrences(char* needle, char* haystack, int* occurrences);
+int print_occurrences(char* needle, char* haystack, int* occurrences, int max_occurrences);
 ```
 
 The argument `occurrences` will contain the result with all the occurrences.
@@ -54,7 +54,7 @@ The argument `occurrences` will contain the result with all the occurrences.
 The function will return the number of occurrences. It will return -1 if there
 is an error.
 
-**To do**: implement the new function and explain what are the potential error case.
+**To do**: implement the new function and explain what are the potential error cases.
 
 
 ## Exercise 3: implement a linked list

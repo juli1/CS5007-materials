@@ -35,7 +35,7 @@ void* start_consumer(void* unused) {
         }
 
     }
-    return NULL; 
+    return NULL;
 }
 
 void* start_producer(void* unused) {
@@ -54,7 +54,7 @@ void* start_producer(void* unused) {
         pthread_cond_signal(&cond);
 
     }
-    return NULL; 
+    return NULL;
 }
 
 
@@ -81,7 +81,7 @@ int main(int argc, char* argv[]) {
     if(pthread_join(thread_producer, NULL)) {
         printf("error pthread_join producer\n");
     }
-    
+
     if(pthread_join(thread_consumer, NULL)) {
         printf("error pthread_join consumer\n");
     }

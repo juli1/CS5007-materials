@@ -54,6 +54,8 @@ We want to write a function in assembly that:
  * takes one argument (an integer)
  * returns `1` if the parameter is a prime number, `0` otherwise
 
+**To do**: implement the code in assembly.
+
 
 ## Exercise 3: putting it together
 
@@ -61,3 +63,5 @@ Write a C program that takes one parameter on the command line.
 If the parameter is an integer, is call the functions written in assembly
 and print a message if the number is a prime number or not.
 If the parameter is not an integer, it returns an error code.
+
+**To do**: write a program that integrates the function from exercise 2.

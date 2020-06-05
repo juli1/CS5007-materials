@@ -4,8 +4,8 @@
 
 Files are managed between the user land and kernel land using
 file descriptors. Resources are then abstracted using different methods,
-either via open/read/write/close functions or fopen/fread/fwrite/fclose
-functions.
+either via `open`/`read`/`write`/`close` functions or
+`fopen`/`fread`/`fwrite`/`fclose` functions.
 
 ## Constraints
 
