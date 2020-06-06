@@ -15,8 +15,7 @@ The operating system provides some inter-processes communication primitives.
 Build a producer/receiver system composed of two processes:
 
  * the **producer** periodically (every 10 seconds) produces an integer
-   and share it with other processes using shared memory. When
-   the producer produces
+   and share it with other processes using shared memory.
  * the **consumer** prints the number from the shared memory when receiving a
    signal. It also prints a liveliness message every 30 seconds to show
    that it is alive and running.
@@ -32,7 +31,7 @@ In that exercise, we want to build our own shell. The shell will have
 only the following restricted features:
 
  * execute commands. If the entered command is not a valid one, show
-   an error message. The shell should also support arguments.
+   an error message.
  * exit the shell when the `exit` command is entered
 
 **Requirements**
@@ -44,4 +43,5 @@ only the following restricted features:
 
 **Bonus points**
 
+ * support arguments
  * not having to enter the full path and support the `PATH` environment variable

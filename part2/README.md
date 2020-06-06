@@ -40,6 +40,7 @@ Occurrence found at position 6
 
 **To do**: implement the function `print_occurrences`
 
+
 ## Exercise 1.5: returning the result
 
 We now want to return the list of occurrence instead of printing them
@@ -60,6 +61,7 @@ is an error.
 ## Exercise 3: implement a linked list
 
 Implement a set of function to implement a linked list of integer.
+The list is ordered, which means that all nodes are ordered in an increasing order.
 You will need to define the following elements:
 
  * A `struct` that represent a node of your linked_list (already provided)
@@ -70,6 +72,85 @@ You will need to define the following elements:
 **Hint**: the file `linkedlist.c` should help you.
 
 **To do**: implement the functions mentioned above.
+
+
+There is a program you can use to validate your results 
+(note: `init_node()` is a program to initialize a node with a value).
+
+```c
+int main() {
+    node_t* linked_list;
+    node_t* node = (node_t*) malloc(sizeof(node_t));
+    init_node(node, 1);
+    linked_list = node;
+    linked_list = add_node(linked_list, 0);
+    print_linked_list(linked_list);
+    printf("-----\n");
+    linked_list = add_node(linked_list, 5);
+    print_linked_list(linked_list);
+    printf("-----\n");
+    linked_list = add_node(linked_list, 0);
+    print_linked_list(linked_list);
+    printf("-----\n");
+    linked_list = add_node(linked_list, 36);
+    print_linked_list(linked_list);
+    printf("-----\n");
+    linked_list = remove_value(linked_list, 10);
+    print_linked_list(linked_list);
+    printf("-----\n");
+    linked_list = remove_value(linked_list, 36);
+    print_linked_list(linked_list);
+    printf("-----\n");
+    linked_list = remove_value(linked_list, 0);
+    print_linked_list(linked_list);
+    printf("-----\n");
+    linked_list = remove_value(linked_list, 1);
+    print_linked_list(linked_list);
+    printf("-----\n");
+}
+```
+
+This is the output
+
+```
+value = 0
+value = 1
+-----
+value = 0
+value = 1
+value = 5
+-----
+value = 0
+value = 0
+value = 1
+value = 5
+-----
+value = 0
+value = 0
+value = 1
+value = 5
+value = 36
+-----
+value = 0
+value = 0
+value = 1
+value = 5
+value = 36
+-----
+value = 0
+value = 0
+value = 1
+value = 5
+-----
+value = 0
+value = 1
+value = 5
+-----
+value = 0
+value = 5
+-----
+
+```
 
 ## Resources
 

@@ -30,6 +30,50 @@ Scope for this delivery:
  5. Define `size_t cs5700_fwrite(void* ptr, size_t size, size_t nmemb, CS5007FILE* f)`: similar behavior than `fwrite()`
 
 
+The following program can be used to test.
+
+```c
+int main(int argc, char* argv[]) {
+    char buf[1024];
+    char* to_write = "hello";
+    CS5007FILE* f;
+    f = cs5700_fopen("/etc/passwd", "r");
+    cs5700_fread(buf, 100, 1, f);
+    cs5700_close(f);
+    free(f);
+    printf("buf = %s\n", buf);
+
+    f = cs5700_fopen("/tmp/test", "w");
+    cs5700_fwrite(to_write, 5, 1, f);
+    cs5700_close(f);
+    free(f);
+
+    f = cs5700_fopen("/file/that/does/not/exists", "w");
+    printf("f is null? %s\n", f == NULL ? "yes" : "no");
+
+    memset(buf, '\0', 1024);
+    f = cs5700_fopen("/tmp/test", "r");
+    int n = cs5700_fread(buf, 100, 1, f);
+    cs5700_close(f);
+    free(f);
+    printf("number of character read = %d\n", n);
+    printf("buf = %s\n", buf);
+
+    return 0;
+}
+```
+
+The expected result is as follow:
+
+```
+buf = root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/
+f is null? yes
+number of character read = 5
+buf = hello
+```
+
 ## Bonus
 
 This gives bonus points in case you want to go beyond the initial requirements.
