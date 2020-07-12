@@ -6,11 +6,11 @@ typedef struct node {
     struct node* next;
 } node_t;
 
-int add_node(node_t* root, node_t toadd) {
+node_t* add_node(node_t* root, node_t toadd) {
     return 0;
 }
 
-int remove_value(node_t* root, node_t toadd) {
+node_t* remove_value(node_t* root, node_t toadd) {
     return 0;
 }
 
