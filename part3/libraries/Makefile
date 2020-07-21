@@ -6,7 +6,7 @@ shared:
  
 static:
 	$(CC) $(CFLAGS) -c libfunctions.c
-	$(AR) $(CFLAGS) crs libfunctions.a libfunctions.o
+	$(AR) crs libfunctions.a libfunctions.o
 	$(CC) $(CFLAGS) -static -o static main.c libfunctions.a
 
 clean:
