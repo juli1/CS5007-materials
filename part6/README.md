@@ -14,11 +14,11 @@ lets you synchronize threads for resources access.
 
 Write a program composed of two threads:
 
- - **Producer thread**: activated periodically every second and the counter
- - **Consumer thread**: activated once thread 1 updated the counter
+ - **Producer thread**: activated periodically every second and update the counter
+ - **Consumer thread**: activated once the producer thread updated the counter
 
 The `counter` is a variable shared between both threads. This is an `int`
-that is incremented at each activation of thread1.
+that is incremented at each activation of the producer thread.
 
 **TODO**: implement this program.
 
